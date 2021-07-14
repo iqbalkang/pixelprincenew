@@ -188,9 +188,8 @@ h1{
 /* Header */
 header{
     height: 95vh;
-    z-index: 10;
-    position: relative;
-
+    background: var(--color-white);
+        
     display: grid;
     justify-items: center;
     grid-template-rows: 7rem 1fr;
@@ -201,12 +200,12 @@ header{
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
+    position: relative;
+    z-index: 100;
 }
 
 .showcase__img{
     width: 45%;
-    position: relative;
-    z-index: 10;
     margin-left: -100px;
     transition: all 1.5s;
 }
@@ -273,7 +272,8 @@ header{
     width: 100%;
     clip-path: polygon(0% 0%, 20% 10%, 100% 0%, 100% 100%, 0% 100%);
     margin-top: -10rem;
-    z-index: -1;
+    position: relative;
+    z-index: 1;
     padding: 20rem 10rem 0rem 10rem;
 }
 
@@ -479,6 +479,7 @@ header{
     height: 100vh;
     width: 100%;
     padding: 10rem 0;
+    background: var(--color-white);
 
     display: flex;
     justify-content: center;
@@ -511,7 +512,7 @@ header{
     height: 100%;
     opacity: .7;
     border-radius: 2rem;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 .photography__btns{
@@ -520,13 +521,13 @@ header{
     left: 50%;
     top: -2rem;
     transform: translateX(-50%);
+    z-index: 100;
 }
 
 .btn{
     border: none;
     padding: 1.25rem 3.5rem;
     border-radius: 5rem;
-    z-index: 10;
     color: inherit;
     font-size: inherit;
     text-transform: capitalize;
@@ -567,11 +568,12 @@ header{
     border-radius: 2rem;
     height: 100%;
     position: absolute;
-    z-index: -2;
+    /* z-index: -2; */
     transition: all .5s;
 }
 
 .videoshoot__text{
+    position: relative;
     z-index: 10;
     height: 100%;
     
@@ -603,7 +605,7 @@ header{
 
 .photo{
     height: 100%;
-    z-index: -3;
+    /* z-index: -3; */
     /* opacity: 0;
     display: none; */
 
@@ -623,7 +625,6 @@ header{
     height: 100%;
     grid-column: 1/-1;
     grid-row: 1/-1;
-    z-index: -1;
     border-radius: 2rem;
 }
 
@@ -639,6 +640,7 @@ header{
     grid-row: 1/-1;
     width: 70%;
     text-align: center;
+    z-index: 1;
 
     display: flex;
     flex-direction: column;
@@ -697,6 +699,7 @@ header{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 2rem;
+    background: var(--color-white);
 }
 
 .gallery__image{
@@ -754,4 +757,31 @@ header{
     grid-column: 6 / 7;
     font-weight: 800;
     font-size: 3rem;
+}
+
+/* footer */
+.footer{
+    position: sticky;
+    bottom: 0rem;
+    z-index: -10;
+    background-color: var(--color-grey);
+    padding: 6rem 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer__icons i:not(:last-child){
+    margin-right: 3rem;
+}
+
+hr{
+    width: 100%;
+}
+
+h2{
+    text-transform: capitalize;
 }

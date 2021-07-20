@@ -1,12 +1,12 @@
 
 // navbar
-const navbar = document.querySelector('.navbar')
-const navbarHandle = document.querySelector('.navbar__handle')
+// const navbar = document.querySelector('.navbar')
+// const navbarHandle = document.querySelector('.navbar__handle')
 
-navbarHandle.addEventListener('click', (e) => {
-    navbarHandle.classList.toggle('pulled')
-    navbar.classList.toggle('pulled')
-})
+// navbarHandle.addEventListener('click', (e) => {
+//     navbarHandle.classList.toggle('pulled')
+//     navbar.classList.toggle('pulled')
+// })
 
 // slider
 const btnLeft = document.querySelector('.arrow--left')

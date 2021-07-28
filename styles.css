@@ -288,9 +288,14 @@ header{
 
 
 @media screen and (max-width: 600px){
+    .header{
+        height: auto;
+    }
+
     .showcase{
         width: 90%;
         grid-template-columns: 1fr;
+        grid-template-rows: 10rem 1fr;
     }
 
     .showcase__title{
@@ -301,53 +306,6 @@ header{
         align-self: end;      
     }
 }
-
-/* .showcase{
-    max-width: 90%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-end;
-    position: relative;
-    z-index: 100;
-    border: 1px solid pink;
-}
-
-.showcase__img{
-    width: 45%;
-    margin-left: -100px;
-    transition: all 1.5s;
-}
-
-.showcase__photo{
-    filter: drop-shadow(0rem .25rem .5rem rgba(0,0,0,.5));
-}
-
-.showcase__img::after{
-    content: '';
-    height: 50%;
-    width: .25rem;
-    position: absolute;
-    right: -8rem;
-    top: 50%;
-    transform: translateY(-40%);
-    background-color: var(--color-grey);
-}
-
-
-.showcase__title{
-    align-self: center;
-    margin-top: 12rem;
-}
-
-.showcase h1{
-    display: flex;
-    align-items: center;
-    text-shadow: 0rem .2rem 1rem rgba(0,0,0,.2);
-}
-
-.showcase__title h1:nth-child(2){
-    margin-top: -3rem;
-} */
 
 .typing-text{
     color: var(--color-accent);
@@ -568,6 +526,7 @@ header{
 
 .text--4{
     transform: translateX(0%);
+    border-bottom: none;
 }
 
 .year-small{
@@ -719,6 +678,7 @@ header{
 
 .photo{
     height: 100%;
+    position: relative;
     /* z-index: -3; */
     /* opacity: 0;
     display: none; */
@@ -736,6 +696,7 @@ header{
 }
 
 .photo__img{
+    width: 100%;
     height: 100%;
     grid-column: 1/-1;
     grid-row: 1/-1;
@@ -747,6 +708,14 @@ header{
     object-fit: cover;
     object-position: 67% 67%;
     border-radius: 2rem;
+}
+
+.photo__overlay{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0);
+    position: absolute;
+    top:0;
 }
 
 .photoshoot__text{
@@ -777,10 +746,6 @@ header{
     align-items: center;
 }
 
-@media screen and (max-width: 1500px){
-
-}
-
 @media screen and (max-width: 1200px){
     .photography__content{
         width: 90%;
@@ -789,6 +754,9 @@ header{
 }
 
 @media screen and (max-width: 800px){
+    .photography{
+        padding: 2rem 0;
+    }
 
     .photography__content{
         width: 95%;
@@ -802,6 +770,11 @@ header{
         opacity: 1;
         margin-top: 2rem; 
     }
+
+    .photo__overlay{
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 2rem;
+}
 }
 
 /* gallery */
@@ -872,7 +845,7 @@ header{
 @media screen and (max-width: 800px){
     
     .gallery{
-        padding-top: 40rem;
+        padding-top: 82rem;
     }
 
     .gallery__text{
@@ -888,7 +861,12 @@ header{
 
     .gallery__image--9{
         grid-column: 1 / 7;
-        height: 700px;
+        height: auto;
+        align-self: center;
+    }
+
+    .gallery__image--10{
+        height: auto;
     }
 
 }
@@ -896,10 +874,10 @@ header{
 @media screen and (max-width: 500px){
     
     .gallery{
-        padding-top: 40rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        gap: 0rem;
+        padding-top: 81rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        row-gap: 2rem;
     }
 
     .gallery__text{
@@ -907,40 +885,36 @@ header{
     }
 
     .gallery__image--1{
-    grid-column: 1 / -1;
+        grid-column: 1 / -1;
     }
     .gallery__image--2{
-        grid-column: 7 / 12;
+        grid-column: 1 / -1;
     }
     .gallery__image--3{
-        grid-column: 2 / 12;
+        grid-column: 1 / -1;
     }
     .gallery__image--4{
-        grid-column: 2 / 7;
+        grid-column: 1 / -1;
     }
     .gallery__image--5{
-        grid-column: 7 / 12;
-        margin-top: 2rem;
+        grid-column: 1 / -1;
+        margin-top: 0;
     }
     .gallery__image--6{
         grid-column: 1 / -1;
     }
     .gallery__image--7{
-        grid-column: 2 / 8;
-        grid-row: 6 / 7;
+        grid-column: 1 / -1;
+        grid-row: auto;
     }
     .gallery__image--8{
-        grid-column: 7 / 12;
-        grid-row: 6 / 7;
-        align-self: center;
+        grid-column: 1 / -1;
     }
     .gallery__image--9{
-        grid-column: 1 / 7;
-        height: 700px;
+        grid-column: 1 / -1;
     }
     .gallery__image--10{
-        grid-column: 7 / -1;
-        height: 700px;
+        grid-column: 1 / -1;
     }
 }
 
